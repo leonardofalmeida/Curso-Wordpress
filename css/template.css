@@ -21,7 +21,7 @@ h4{ font-size: 18px; margin-top: 0;}
 .menu-principal ul  li.current-menu-item a{ color:#e58888; }
 
 /* Slide */
-.slide{ padding: 25px 0; }
+.slide{ padding: 0; }
 
 /* Serviços */
 .servicos{ background: #4c1b1b; padding: 25px 0; color: #fefefe; }

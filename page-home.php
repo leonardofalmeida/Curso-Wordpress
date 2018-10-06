@@ -3,7 +3,7 @@
 	<main>
 		<section class="slide">
 			<div class="container">
-				Slide
+				<?php motoPressSlider( "home-slider" ) ?>
 			</div>
 		</section>
 		<section class="servicos">
