@@ -13,24 +13,26 @@ Template Name: Páginas Gerais
 	<main>
 		<div class="conteudo">
 			<div class="container">
-				<?php 
-					// Se houver algum post
-					if(have_posts()) :
-						// Enquanto houver algum post, chame o post de determinada maneira
-						while (have_posts()) : the_post();
-				?>
-					<h1><?php the_title(); ?></h1>
-					<p>Autor: <?php the_author(); ?></p>
-					<p><?php the_content(); ?></p>
-					<p>ESTOU SENDO USADO!!!!!!!!!!!</p>
-				<?php 
-				endwhile;
-				else:
-				 ?>
-					<p>Nao tem nada ainda pra mostrar</p>
-				<?php 
-				endif;
-				?>	
+				<div id="<?php the_ID(); ?>" <?php post_class(array('post-formato-padrao')); ?>> 
+					<?php 
+						// Se houver algum post
+						if(have_posts()) :
+							// Enquanto houver algum post, chame o post de determinada maneira
+							while (have_posts()) : the_post();
+					?>
+						<h1><?php the_title(); ?></h1>
+						<p>Autor: <?php the_author(); ?></p>
+						<p><?php the_content(); ?></p>
+						<p>ESTOU SENDO USADO!!!!!!!!!!!</p>
+					<?php 
+					endwhile;
+					else:
+					 ?>
+						<p>Nao tem nada ainda pra mostrar</p>
+					<?php 
+					endif;
+					?>	
+				</div>
 			</div>
 		</div>
 	</main>

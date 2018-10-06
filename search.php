@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<?php get_template_part('image-header'); ?>
+
 <div id="primary">
 	<main id="main">
 		<div class="container">

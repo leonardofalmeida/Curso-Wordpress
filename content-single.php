@@ -1,4 +1,4 @@
-<article>
+<article id="<?php the_ID(); ?>" <?php post_class(); ?>> 
 	
 	<header>
 		<h1><?php the_title(); ?></a></h1>

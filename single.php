@@ -1,30 +1,33 @@
 <?php get_header(); ?>
 
+<?php get_template_part('image-header'); ?>
+
 <div id="primary">
 	<main id="main">
 		<div class="container">
-			<?php 
+			<div id="<?php the_ID(); ?>" <?php post_class(array('post-formato-padrao')); ?>> 
+				<?php 
 
-			while(have_posts()): the_post();
+				while(have_posts()): the_post();
 
-				get_template_part('content', 'single');
+					get_template_part('content', 'single');
 
-				?>
-		
-				<div class="paginacao text-left"><?php previous_post_link(); ?></div>
-				<div class="paginacao text-right"><?php next_post_link(); ?></div>
+					?>
+					<div class="row">
+						<div class="paginacao text-left col-md-6"><?php previous_post_link(); ?></div>
+						<div class="paginacao text-right col-md-6"><?php next_post_link(); ?></div>
+					</div>
+					<?php	
 
-				<?php	
+					if (comments_open() || get_comments_number()):
+						comments_template();
+					endif;
 
-				if (comments_open() || get_comments_number()):
-					comments_template();
-				endif;
+				endwhile;
 
-			endwhile;
-
-			 ?>
+				 ?>
+			</div>
 		</div>
-
 	</main>
 </div>
 
