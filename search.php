@@ -5,7 +5,10 @@
 <div id="primary">
 	<main id="main">
 		<div class="container">
+			<h2>Resultados da pesquisa para: <?php echo get_search_query(); ?></h2>
 			<?php 
+
+			get_search_form();
 
 			while(have_posts()): the_post();
 

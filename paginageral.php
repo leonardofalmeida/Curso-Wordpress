@@ -7,7 +7,7 @@ Template Name: Páginas Gerais
 <?php get_header(); ?>
 
 <!--Imagem do header, o source é a imagem do uploado feito no wordpress, e é pego o height e o width dessa imagem-->
-<img class="img-fluid" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+<?php get_template_part('image-header'); ?>
 
 <div class="conteudo-wrapper">
 	<main>
@@ -21,7 +21,6 @@ Template Name: Páginas Gerais
 							while (have_posts()) : the_post();
 					?>
 						<h1><?php the_title(); ?></h1>
-						<p>Autor: <?php the_author(); ?></p>
 						<p><?php the_content(); ?></p>
 						<p>ESTOU SENDO USADO!!!!!!!!!!!</p>
 					<?php 
